@@ -12,7 +12,9 @@ cmake_minimum_required(VERSION 3.4.1)
 
 # opencv
 set(OpenCV_STATIC on)
-set(OpenCV_DIR $ENV{OPENCV_ANDROID}/sdk/native/jni)
+#set(OpenCV_DIR $ENV{OPENCV_ANDROID}/sdk/native/jni)
+# OpenCV-android-sdk is now called as a submodule and linked by a relative path
+set(OpenCV_DIR ../../../../../OpencvAndroidSdk/sdk/native/jni)
 find_package(OpenCV REQUIRED)
 
 
